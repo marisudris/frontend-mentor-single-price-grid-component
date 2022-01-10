@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub]()
-- Live Site URL: [GitHub Pages]()
+- Solution URL: [GitHub](https://github.com/marisudris/frontend-mentor-single-price-grid-component)
+- Live Site URL: [GitHub Pages](https://marisudris.github.io/frontend-mentor-single-price-grid-component/)
 
 ## My process
 
