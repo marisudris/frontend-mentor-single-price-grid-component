@@ -22,8 +22,8 @@ ul {
 /** Styles **/
 :root {
   --clr-cyan: hsl(179, 62%, 43%);
-  --clr-lighter-cyan: #4abebd;
-  --clr-light-cyan: #77eae7;
+  --clr-light-cyan: #4abebd;
+  --clr-very-light-cyan: #77eae7;
   --clr-bright-yellow: hsl(71, 73%, 54%);
 
   --clr-light-gray: hsl(204, 43%, 93%);
@@ -60,7 +60,7 @@ body {
 
 .grid-card__header {
   background: white;
-  padding: 1.5em;
+  padding: 2em 1.5em;
 }
 
 @media (min-width: 600px) {
@@ -72,14 +72,48 @@ body {
 
 .grid-card__title {
   color: var(--clr-cyan);
-  margin-bottom: 1.2em;
+  margin-bottom: 1.1em;
 }
 
 .grid-card__subtitle {
   color: var(--clr-bright-yellow);
   font-size: 1.1rem;
   font-weight: bold;
-  margin-bottom: 0.7em;
+  margin-bottom: 0.6em;
+}
+
+.grid-card__header-prose {
+  color: var(--clr-grayish-blue);
+  line-height: 1.6;
+}
+
+.grid-card__section {
+  padding: 1.5em;
+}
+
+@media (min-width: 600px) {
+  .grid-card__section {
+    padding: 2.5em;
+  }
+}
+
+.grid-card__section--cta {
+  color: white;
+  background: var(--clr-cyan);
+}
+
+.grid-card__section--list {
+  color: white;
+  background: var(--clr-light-cyan);
+}
+
+.grid-card__section-title {
+  font-size: 1.125rem;
+  margin-bottom: 1.1em;
+}
+
+.grid-card__section-body {
+  margin-bottom: 1.6em;
 }
 
 .grid-card__prose {
@@ -87,63 +121,29 @@ body {
   line-height: 1.6;
 }
 
-.section {
-  padding: 1.5em;
-}
-
-@media (min-width: 600px) {
-  .section {
-    padding: 2.5em;
-  }
-}
-
-.section--cta {
-  color: white;
-  background: var(--clr-cyan);
-}
-
-.section--list {
-  color: white;
-  background: var(--clr-lighter-cyan);
-}
-
-.section__title {
-  font-size: 1.25rem;
-  margin-bottom: 1.3em;
-}
-
-.section__byline {
-  margin-bottom: 1.3em;
-}
-
-.section__prose {
-  color: var(--clr-grayish-blue);
-  font-size: 0.875rem;
-  line-height: 1.6;
-}
-
-.section--cta .section__prose {
+.grid-card__section--cta .grid-card__prose {
   color: white;
 }
-.section--list .section__prose {
+.grid-card__section--list .grid-card__prose {
   color: var(--clr-light-gray);
 }
 
-.section__pricing {
+.grid-card__pricing {
   display: flex;
   align-items: center;
-  gap: 1em;
-  font-size: 0.875rem;
-  color: var(--clr-light-cyan);
+  gap: 0.75em;
+  color: var(--clr-very-light-cyan);
+  margin-bottom: 0.3em;
 }
 
-.section__pricing-figure {
+.grid-card__pricing-figure {
   color: white;
   font-size: 2rem;
   font-weight: bold;
 }
 
-.list {
+.grid-card__list {
+  font-size: 0.875rem;
   line-height: 1.4;
 }
 
@@ -154,12 +154,13 @@ body {
   min-height: 3rem;
   color: white;
   font-family: "Karla", sans-serif;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: bold;
   background: var(--clr-bright-yellow);
   border: none;
   border-radius: var(--border-radius);
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.192);
+  cursor: pointer;
 }
 
 .button--wide {
