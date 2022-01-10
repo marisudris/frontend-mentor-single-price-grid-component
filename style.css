@@ -56,10 +56,35 @@ body {
   .grid-card {
     grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  .section--intro {
+.grid-card__header {
+  background: white;
+  padding: 1.5em;
+}
+
+@media (min-width: 600px) {
+  .grid-card__header {
     grid-column: span 2;
+    padding: 2.5em;
   }
+}
+
+.grid-card__title {
+  color: var(--clr-cyan);
+  margin-bottom: 1.2em;
+}
+
+.grid-card__subtitle {
+  color: var(--clr-bright-yellow);
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.7em;
+}
+
+.grid-card__prose {
+  color: var(--clr-grayish-blue);
+  line-height: 1.6;
 }
 
 .section {
@@ -70,10 +95,6 @@ body {
   .section {
     padding: 2.5em;
   }
-}
-
-.section--intro {
-  background: white;
 }
 
 .section--cta {
@@ -89,10 +110,6 @@ body {
 .section__title {
   font-size: 1.25rem;
   margin-bottom: 1.3em;
-}
-
-.section--intro .section__title {
-  color: var(--clr-cyan);
 }
 
 .section__byline {
@@ -117,7 +134,7 @@ body {
   align-items: center;
   gap: 1em;
   font-size: 0.875rem;
-  color: var(--clr-light-cyan)
+  color: var(--clr-light-cyan);
 }
 
 .section__pricing-figure {
@@ -127,7 +144,7 @@ body {
 }
 
 .list {
-  line-height: 1.4
+  line-height: 1.4;
 }
 
 .button {
@@ -167,9 +184,4 @@ body {
   white-space: nowrap;
   width: 1px;
   opacity: 0;
-}
-
-.accent {
-  color: var(--clr-bright-yellow);
-  font-weight: bold;
 }
