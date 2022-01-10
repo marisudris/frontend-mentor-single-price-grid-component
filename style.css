@@ -161,6 +161,13 @@ body {
   border-radius: var(--border-radius);
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.192);
   cursor: pointer;
+  transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+
+.button:hover,
+.button:focus {
+  color: var(--clr-bright-yellow);
+  background: white;
 }
 
 .button--wide {
